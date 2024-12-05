@@ -1,5 +1,5 @@
 const repeatString = (string, num) => {
-  let wordWord = " ";
+  let wordWord = "";
 
   for (let i = 0; i < num; i++) {
     wordWord += `${string}`;
