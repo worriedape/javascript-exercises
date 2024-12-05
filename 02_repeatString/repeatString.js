@@ -1,5 +1,10 @@
-const repeatString = function() {
+const repeatString = (string, num) => {
+  let wordWord = " ";
 
+  for (let i = 0; i < num; i++) {
+    wordWord += `${string}`;
+  }
+  alert(wordWord);
 };
 
 // Do not edit below this line
