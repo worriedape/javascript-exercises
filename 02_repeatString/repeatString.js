@@ -4,7 +4,7 @@ const repeatString = (string, num) => {
   for (let i = 0; i < num; i++) {
     wordWord += `${string}`;
   }
-  alert(wordWord);
+  return wordWord;
 };
 
 // Do not edit below this line
