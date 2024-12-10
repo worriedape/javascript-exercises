@@ -3,7 +3,7 @@ const removeFromArray = (array, ...deletable) => {
 
   outer: for (let x of array) {
     for (let item of deletable) {
-      if (x == item) continue outer;
+      if (x === item) continue outer;
     }
     newArray.push(x);
   }
@@ -26,5 +26,8 @@ module.exports = removeFromArray;
     return it into a new array
 
     removeFromArray([1,2,3], 2)
+
+    From given solution:
+    **let newArray = array.filter(x => !deletable.includes(x));
 
     */
