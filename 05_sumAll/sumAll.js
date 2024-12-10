@@ -1,4 +1,12 @@
-const sumAll = function() {
+const sumAll = function(...total) {
+
+    let sum;
+
+    for( num of total) {
+        sum += +num;
+    }
+
+    return sum;
 
 };
 
