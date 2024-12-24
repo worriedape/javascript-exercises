@@ -1,4 +1,14 @@
 const findTheOldest = function (collection) {
+    // to avoid mutating the original array, you could
+    // use return [...collection] for a shallow copy:
+    /*
+     return [...collection]
+    .sort(
+      (a, b) =>
+        ((b.yearOfDeath || new Date().getFullYear()) - b.yearOfBirth) -
+        ((a.yearOfDeath || new Date().getFullYear()) - a.yearOfBirth)
+    )[0];
+    */
  collection.sort(
    (a, b) =>
      ((b.yearOfDeath || new Date().getFullYear()) -
@@ -10,22 +20,3 @@ const findTheOldest = function (collection) {
 
 // Do not edit below this line
 module.exports = findTheOldest;
-
- // let years = collection.yearOfDeath - collection.yearOfBirth
-  //return collection.sort((a, b)=> )
-
-  
-
- /*let sortYears;
-
-  if (!collection.yearOfDeath === undefined) {
-    sortYears = collection.sort(
-      (a, b) => (a.yearOfDeath - a.yearOfBirth) - (b.yearOfDeath - b.yearOfBirth)
-    );
-  } else if(collection.yearOfDeath === undefined) {
-    sortYears = collection.sort(
-      (a, b) => (((new Date()).getFullYear()) - a.yearOfBirth) - (((new Date()).getFullYear()) - b.yearOfDeath)
-    );
-  }
-
-  return sortYears;*/
